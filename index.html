@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+
+ <style>
+ body {
+            background: #000404; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        #header {
+            text-align: left;
+            padding: 15px;
+            margin: 15px;
+            font-size: 25px;
+            font-family: "Helvetica Neue, sans-serif";
+            color: #ffffff;
+            position: absolute;
+            top: 0;
+            left: 0; 
+        }
+        img {
+            display: block;
+            width: 450px; /* Makes width smaller */
+            height: auto; /* Maintains ratio */
+
+        }
+
+ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #000000;
+  border-radius: 7px;
+  height: 40px; /* Adjustt height */
+  width: 350px;
+  display: flex;
+  line-height: 20px; /* Adjust line-height */
+}
+
+li {
+  flex: 1;
+}
+
+li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #382323; /* hover colour */
+  color: aliceblue; /* text colour */
+}
+h1 {
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+h2 { 
+      margin-top: 20px;
+      margin-right: -650px;
+      color: rgb(115, 71, 237);
+      position: absolute;
+      top: 300px;
+     }
+p {  
+      margin-top: 20px;
+      margin-right: -650px;
+      color: rgb(146, 150, 224);
+      position: absolute;
+      top: 370px;
+     }
+
+      
+img {
+            display: inline-block;
+            margin: 40px; /* margin between images */
+            margin-right: 550px;
+        }
+ </style>
+</head>
+<body>
+  <div id="header">
+    nSn.
+</div>
+<h2>Hi! I'm Nirthika.<br>A Designer :)</h2>
+<p>
+  A GBDA student from <br>
+  I'm passionate, driven, and lazy, the triple threat that got me into UW GBDA. <br>
+  Laziness coupled with drive is a lethal combination that can take any creative <br>
+  further than they can ever imagine. <br>
+  Idle time is a necessity. To reset and take in the world with a calm mind in order to draw inspiration. <br>
+  This philosophy is reflected in my work presented through my portfolio. <br>
+  Most of my work is an overlap of the soulful humanity <br> in which I view the world and the globalized world we live in. <br>
+
+  When I am not staring at my laptop working away towards my degree, <br>
+  you can find me dancing to my favorite tunes, modeling part-time, or cuddling with my fur baby. <br>
+  Importantly taking time for myself to enjoy this little life of mine.
+</p>
+
+
+
+
+<nav>
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+</nav>
+<div id="slideshow">
+<img src="NERO 1.png" class="img-center" width="358" height="477">
+<img src="NERO 2.png" class="img-center" width="358" height="477">
+<img src="NERO 3.png" class="img-center" width="358" height="477">
+<img src="NERO 4.png" class="img-center" width="358" height="477">
+<img src="NERO 5.png" class="img-center" width="358" height="477">
+<img src="NERO 6.png" class="img-center" width="358" height="477">
+</div>
+
+<!-- Code copied from: https://www.w3schools.com/w3css/w3css_slideshow.asp 
+  Author: w3schools.com 
+  name: Automatic slideshow 
+  Description: Displays an automatic slideshow
+  Date retrieved: Dec 6th 2023 --> 
+
+<!-- Copied code starts -->
+
+<script> 
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+      let i;
+      let slides = document.querySelectorAll('#slideshow img');
+
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+      }
+
+      slideIndex++;
+      if (slideIndex > slides.length) {
+          slideIndex = 1;
+      }
+
+      slides[slideIndex - 1].style.display = 'block';
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+  } 
+ <!-- Copied code ends-->
+
+</script>
+</body>
+</html>
